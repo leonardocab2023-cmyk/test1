@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonardo's Website</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #4e73df;
+            --secondary-color: #2e59d9;
+            --accent-color: #36b9cc;
+        }
+        
+        body {
+            padding-top: 76px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fc;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+        }
+        
+        .jumbotron {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 2rem;
+            margin-bottom: 2rem;
+            border-radius: 0.5rem;
+        }
+        
+        .profile-img {
+            max-width: 200px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .card {
+            border: none;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 1.5rem;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+        
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+        }
+        
+        .img-placeholder {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8f9fa;
+            color: #6c757d;
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        footer {
+            margin-top: 3rem;
+            padding: 2rem 0;
+            background-color: #2c3e50;
+            color: white;
+        }
+        
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: var(--accent-color);
+        }
+        
+        .nav-pills .nav-link.active {
+            background-color: var(--primary-color);
+        }
+        
+        .favorite-site-card {
+            transition: all 0.3s;
+        }
+        
+        .favorite-site-card:hover {
+            transform: scale(1.03);
+        }
+        
+        .project-tech {
+            display: inline-block;
+            background-color: #e9ecef;
+            padding: 3px 8px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-user-circle me-2"></i>My Portfolio
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutme.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="academicinterests.html">Academic</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hobbies.html">Hobbies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="favorites.html">Favorites</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+   
+
+    <!-- Academic Interests Page -->
+    <section id="academic" class="container py-5">
+        <h2 class="section-title">Academic Interests</h2>
+        
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="img-placeholder">
+                        <i class="fas fa-square-root-alt fa-3x text-muted"></i>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Math</h5>
+                        <p class="card-text">Exploring numbers learning equations and their applications in solving real-world problems. Currently lerning vectors.</p>
+                        <div class="mt-3">
+                            <span class="project-tech">Khan Academy</span>
+                            <span class="project-tech">IXL</span>
+                            <span class="project-tech">School yourself</span>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm mt-3"><i class="fas fa-image me-1"></i>Add Image</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="img-placeholder">
+                        <i class="fas fa-laptop-code fa-3x text-muted"></i>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Computer programing</h5>
+                        <p class="card-text">Studying computer science were we learn responsive design principles, and progressive web applications to create seamless user experiences.</p>
+                        <div class="mt-3">
+                            <span class="project-tech">Khan Academy</span>
+                            <span class="project-tech">w3schools</span>
+                            <span class="project-tech">Dr.Ryan</span>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm mt-3"><i class="fas fa-image me-1"></i>Add Image</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-5">
+            <h4 class="mb-3">Academic Goals</h4>
+            <p>My academic goal is to strengthen my foundation in mathematics while advancing my skills in computer programming, so I can apply problem-solving and analytical thinking to areas such as software development, data science, and artificial intelligence. I aim to pursue higher education in computer science and related fields, where I can combine mathematical reasoning with programming to design efficient algorithms, solve real-world problems, and contribute to technological innovation.</p>
+            
+            <h4 class="mt-4 mb-3">Publications & Projects</h4>
+            <div class="list-group">
+                <a href="index.html" class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">My first website.</h5>
+                        <small>2025</small>
+                    </div>
+                    <p class="mb-1">Website about me</p>
+                    <small>Published Because its for a test grade.</small>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <h5>My Personal Website</h5>
+                    <p>Thanks for visiting! Feel free to reach out if you'd like to connect.</p>
+                </div>
+                <div class="col-md-3 mb-3 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="aboutme.html" class="text-white">About</a></li>
+                        <li><a href="projects.html" class="text-white">Projects</a></li>
+						<li><a href="academicinterests.html" class="text-white">Academic Interests</a></li>
+                        <li><a href="favorites.html" class="text-white">Favorite Sites</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Connect With Me</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <p class="mt-3">Email: alex.johnson@example.com</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2023 My Personal Website. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
